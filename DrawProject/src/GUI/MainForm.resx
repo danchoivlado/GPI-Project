@@ -1189,6 +1189,29 @@
         iX3T1DJyR1kdAIB58F7iPYWIiIiIiIiIiIiIiGj4LVjw/wFBxnXfregONgAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="groupSelectedButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAFSSURBVGhD7Y9BCsMwDATz/0+39sFBBO0qHZBzaAb2YmkW
+        +Xh52cOnyG6yG2Ik2XLMbrIbYiRqoRSbwPdU4lO5ot5PKvGpXFHvJ1hsAt+zFlR2k90QI8mWY3aT3RBz
+        i5+WN4Dv+YuPrBkNAbtOXDMaAnadSEupN8GuE2kp9SbYdSItpd4Eu06kpdSbYNeJtJR6E+w6kZZSb4Jd
+        J9LS5VXJcDNLR+nyqmS4maWjtPLcvHIlHaWV5+aVK+korTw3r1xJR2nluXnlSu6U0ijcvHIld0ppFG5e
+        uRIsDqjrPNrJxQF1nUc7uTigrvNoJxcH1HUe7eTigLrOo51cHFDXebSTi4Pl0mS4mQWLg+XSZLiZBYtN
+        /OdH1rLKbrIbYiTZcsxushtiJGqhFJvA91TiU7mi3k8q8alcUe8nWGwC37MWVHaT3RAjyZZjdpPdEPPy
+        0stxfAGQKGG7k3nkKQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="removeGroupButton.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAExSURBVGhD7Y9BCsNADAPz/0+3+CAwQjHurraQ1gNzWAyj
+        5BqGYfgZXjc6UN3wCGoodKC64RE4ngddAn5buRtzCvhtJQ9mHahueAQ1FDpQ3fAoJ0e+8gNgfqTBX/wI
+        buwy24GCqo0bu8x2oCB/4J2A3x+zHShAuxLw+2O2AwVVGzd2me1AQdXGjV1mO1DQadv2bSFBp23bt4UE
+        nbZt3xYSdNq2fVtI0Gnb9m0hQadt27eFBJ22bd8WEnTa2/sIsA5UN1RUtxZ5IOtAdUNFdWvBAbydAn5n
+        qlsLDuDtFPA7U91aIMAqqpsi97KK6tYiD2QV1U2Re1lFdbNzcmx+ZIXH/whGWAeqGx5BDYUOVDc8Asfz
+        oEvAbyt3Y04Bv63kwawD1Q2PoIZCB6obDsMwPJ7regN8tr5Q2vPRywAAAABJRU5ErkJggg==
+</value>
+  </data>
   <metadata name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>353, 17</value>
   </metadata>

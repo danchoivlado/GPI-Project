@@ -73,6 +73,7 @@
     <Compile Include="src\GUI\Program.cs" />
     <Compile Include="src\Model\ElipseShape.cs" />
     <Compile Include="src\Model\ExamShape.cs" />
+    <Compile Include="src\Model\ShapeGroup.cs" />
     <Compile Include="src\Model\RectangleShape.cs" />
     <Compile Include="src\Model\Shape.cs" />
     <Compile Include="src\Model\TriangleShape.cs" />
@@ -125,6 +126,8 @@
   <ItemGroup>
     <Content Include="ButtonImages\chemistry-class-flask-with-liquid-for-experimentation.png" />
     <Content Include="ButtonImages\ellipse.png" />
+    <Content Include="ButtonImages\icons8-group-objects-50.png" />
+    <Content Include="ButtonImages\icons8-ungroup-objects-50.png" />
     <Content Include="ButtonImages\paint-bucket.png" />
     <Content Include="ButtonImages\pen.png" />
     <Content Include="ButtonImages\plain-triangle.png" />

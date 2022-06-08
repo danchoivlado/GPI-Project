@@ -51,6 +51,8 @@
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.borderColorButton = new System.Windows.Forms.ToolStripButton();
             this.exampleFigure = new System.Windows.Forms.ToolStripButton();
+            this.groupSelectedButton = new System.Windows.Forms.ToolStripButton();
+            this.removeGroupButton = new System.Windows.Forms.ToolStripButton();
             this.viewPort = new Draw.DoubleBufferedPanel();
             this.mainMenu.SuspendLayout();
             this.statusBar.SuspendLayout();
@@ -139,7 +141,9 @@
             this.triangleStrBtn,
             this.fillColorStripButton,
             this.borderColorButton,
-            this.exampleFigure});
+            this.exampleFigure,
+            this.groupSelectedButton,
+            this.removeGroupButton});
             this.speedMenu.Location = new System.Drawing.Point(0, 25);
             this.speedMenu.Name = "speedMenu";
             this.speedMenu.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
@@ -235,6 +239,26 @@
             this.exampleFigure.Text = "toolStripButton1";
             this.exampleFigure.Click += new System.EventHandler(this.exampleFigure_Click);
             // 
+            // groupSelectedButton
+            // 
+            this.groupSelectedButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.groupSelectedButton.Image = ((System.Drawing.Image)(resources.GetObject("groupSelectedButton.Image")));
+            this.groupSelectedButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.groupSelectedButton.Name = "groupSelectedButton";
+            this.groupSelectedButton.Size = new System.Drawing.Size(23, 22);
+            this.groupSelectedButton.Text = "toolStripButton1";
+            this.groupSelectedButton.Click += new System.EventHandler(this.groupSelectedButton_Click);
+            // 
+            // removeGroupButton
+            // 
+            this.removeGroupButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.removeGroupButton.Image = ((System.Drawing.Image)(resources.GetObject("removeGroupButton.Image")));
+            this.removeGroupButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.removeGroupButton.Name = "removeGroupButton";
+            this.removeGroupButton.Size = new System.Drawing.Size(23, 22);
+            this.removeGroupButton.Text = "toolStripButton1";
+            this.removeGroupButton.Click += new System.EventHandler(this.removeGroupButton_Click);
+            // 
             // viewPort
             // 
             this.viewPort.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -297,5 +321,7 @@
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.ToolStripButton borderColorButton;
         private System.Windows.Forms.ToolStripButton exampleFigure;
+        private System.Windows.Forms.ToolStripButton groupSelectedButton;
+        private System.Windows.Forms.ToolStripButton removeGroupButton;
     }
 }

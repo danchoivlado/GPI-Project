@@ -218,5 +218,64 @@ namespace Draw
             stream.Close();
             return obj;
         }
+
+        public static void GroupSelected()
+        {
+            float minX = float.MaxValue;
+            float minY = float.MaxValue;
+            float maxX = float.MinValue;
+            float maxY = float.MinValue;
+            foreach (var item in Selection)
+            {
+                if (minX > item.Location.X)
+                {
+                    minX = item.Location.X;
+                }
+                if (minY > item.Location.Y)
+                {
+                    minY = item.Location.Y;
+                }
+                if (maxX < item.Location.X + item.Width)
+                {
+                    maxX = item.Location.X + item.Width;
+                }
+                if (maxY < item.Location.Y + item.Height)
+                {
+                    maxY = item.Location.Y + item.Height;
+                }
+            }
+            var group = new ShapeGroup(new RectangleF(minX, minY, maxX - minX, maxY - minY));
+            group.SubItem = Selection; // всяка 
+
+            ClearShapeList();
+
+            Selection = new List<Shape>();
+            Selection.Add(group);
+            ShapeList.Add(group);
+
+        }
+
+        public static void ClearShapeList()
+        {
+            foreach (var item in Selection)
+            {
+                ShapeList.Remove(item);
+            }
+        }
+
+        public static void RemoveGroup()
+        {
+            for (int i = 0; i < Selection.Count; i++) // използваме фор цикъл понеже правим промени по листа който итерираме
+            {
+                if (Selection[i].GetType().Equals(typeof(ShapeGroup)))
+                {
+                    ShapeGroup group = (ShapeGroup)Selection[i];
+
+                    ShapeList.AddRange(group.SubItem); // добавяме елементите от групата в нормален shape list 
+                    ShapeList.Remove(Selection[i]);
+                    Selection.Remove(Selection[i]);
+                }
+            }
+        }
     }
 }

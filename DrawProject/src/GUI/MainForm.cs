@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Draw.src.Model;
+using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
@@ -149,8 +150,12 @@ namespace Draw
                 var color = colorDialog1.Color;
 
                 foreach (var item in DialogProcessor.Selection)
-
                 {
+                    if (item.GetType().Equals(typeof(ShapeGroup)))
+                    {
+                        ((ShapeGroup)item).GroupFillColor(color);
+                    }
+
                     item.FillColor = color;
                 }
 
@@ -171,8 +176,11 @@ namespace Draw
                 var color = colorDialog1.Color;
 
                 foreach (var item in DialogProcessor.Selection)
-
                 {
+                    if (item.GetType().Equals(typeof(ShapeGroup)))
+                    {
+                        ((ShapeGroup)item).GroupBorderColor(color);
+                    }
                     item.BorderColor = color;
                 }
 
@@ -185,6 +193,21 @@ namespace Draw
             DialogProcessor.AddRandomExample();
 
             InvalidateViewPort("Последно действие: Рисуване на фигура");
+        }
+
+        private void groupSelectedButton_Click(object sender, EventArgs e)
+        {
+            if (DialogProcessor.Selection.Count >= 2)
+            {
+                DialogProcessor.GroupSelected();
+                InvalidateViewPort("Групиране");
+            }
+        }
+
+        private void removeGroupButton_Click(object sender, EventArgs e)
+        {
+            DialogProcessor.RemoveGroup();
+            InvalidateViewPort("Премахваме групата");
         }
     }
 }
