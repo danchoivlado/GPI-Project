@@ -42,8 +42,12 @@
             this.drawRectangleSpeedButton = new System.Windows.Forms.ToolStripButton();
             this.pickUpSpeedButton = new System.Windows.Forms.ToolStripButton();
             this.elipseStrButton = new System.Windows.Forms.ToolStripButton();
-            this.viewPort = new Draw.DoubleBufferedPanel();
             this.triangleStrBtn = new System.Windows.Forms.ToolStripButton();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
+            this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.viewPort = new Draw.DoubleBufferedPanel();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.mainMenu.SuspendLayout();
             this.statusBar.SuspendLayout();
             this.speedMenu.SuspendLayout();
@@ -66,7 +70,9 @@
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.exitToolStripMenuItem});
+            this.exitToolStripMenuItem,
+            this.saveToolStripMenuItem,
+            this.openToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 19);
             this.fileToolStripMenuItem.Text = "File";
@@ -74,7 +80,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(93, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItemClick);
             // 
@@ -164,6 +170,23 @@
             this.elipseStrButton.Text = "toolStripButton1";
             this.elipseStrButton.Click += new System.EventHandler(this.elipseStrButton_Click);
             // 
+            // triangleStrBtn
+            // 
+            this.triangleStrBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.triangleStrBtn.Image = ((System.Drawing.Image)(resources.GetObject("triangleStrBtn.Image")));
+            this.triangleStrBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.triangleStrBtn.Name = "triangleStrBtn";
+            this.triangleStrBtn.Size = new System.Drawing.Size(23, 22);
+            this.triangleStrBtn.Text = "toolStripButton1";
+            this.triangleStrBtn.Click += new System.EventHandler(this.triangleStrBtn_Click);
+            // 
+            // saveToolStripMenuItem
+            // 
+            this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Text = "Save";
+            this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            // 
             // viewPort
             // 
             this.viewPort.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -177,15 +200,16 @@
             this.viewPort.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ViewPortMouseMove);
             this.viewPort.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ViewPortMouseUp);
             // 
-            // triangleStrBtn
+            // openToolStripMenuItem
             // 
-            this.triangleStrBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.triangleStrBtn.Image = ((System.Drawing.Image)(resources.GetObject("triangleStrBtn.Image")));
-            this.triangleStrBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.triangleStrBtn.Name = "triangleStrBtn";
-            this.triangleStrBtn.Size = new System.Drawing.Size(23, 22);
-            this.triangleStrBtn.Text = "toolStripButton1";
-            this.triangleStrBtn.Click += new System.EventHandler(this.triangleStrBtn_Click);
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.openToolStripMenuItem.Text = "Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // MainForm
             // 
@@ -228,5 +252,9 @@
 		private System.Windows.Forms.MenuStrip mainMenu;
         private System.Windows.Forms.ToolStripButton elipseStrButton;
         private System.Windows.Forms.ToolStripButton triangleStrBtn;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
+        private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

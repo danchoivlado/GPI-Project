@@ -3,6 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.Drawing;
 using System.Drawing.Drawing2D;
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Windows.Forms;
 
 namespace Draw
@@ -158,6 +161,46 @@ namespace Draw
                 grfx.DrawRectangle(Pens.Black, item.Location.X - 3 - (item.BorderWidth / 2), item.Location.Y - 3 - (item.BorderWidth / 2), item.Width + 6 + (item.BorderWidth), item.Height + 6 + (item.BorderWidth));
                 grfx.ResetTransform();
             }
+        }
+
+        public static void ConvertToStream(object obj, string filePath = null)
+        {
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream;
+            if (filePath != null)
+            {
+                stream = new FileStream(filePath + ".bin",
+                                  FileMode.Create);
+            }
+            else
+            {
+                stream = new FileStream("MyFile.bin",
+                                        FileMode.Create,
+                                        FileAccess.Write, FileShare.None);
+            }
+            formatter.Serialize(stream, obj);
+            stream.Close();
+        }
+
+        public static object ConvertStremFromOtheFile(string filePath = null)
+        {
+            object obj;
+            IFormatter formatter = new BinaryFormatter();
+            Stream stream;
+            if (filePath != null)
+            {
+                stream = new FileStream(filePath,
+                                     FileMode.Open,
+                                     FileAccess.Read, FileShare.None);
+            }
+            else
+            {
+                stream = new FileStream("MyFile.bin",
+                                    FileMode.Open);
+            }
+            obj = formatter.Deserialize(stream);
+            stream.Close();
+            return obj;
         }
     }
 }

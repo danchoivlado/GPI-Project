@@ -123,5 +123,23 @@ namespace Draw
 
             viewPort.Invalidate();
         }
+
+        private void saveToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (saveFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+
+                DialogProcessor.ConvertToStream(DialogProcessor.ShapeList, saveFileDialog1.FileName);
+            }
+        }
+
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                DialogProcessor.ShapeList = (List<Shape>)DialogProcessor.ConvertStremFromOtheFile(openFileDialog1.FileName);
+                viewPort.Invalidate();
+            }
+        }
     }
 }
