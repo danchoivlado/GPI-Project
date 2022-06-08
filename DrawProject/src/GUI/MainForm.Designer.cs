@@ -45,9 +45,12 @@
             this.triangleStrBtn = new System.Windows.Forms.ToolStripButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.saveToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.viewPort = new Draw.DoubleBufferedPanel();
             this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.fillColorStripButton = new System.Windows.Forms.ToolStripButton();
+            this.colorDialog1 = new System.Windows.Forms.ColorDialog();
+            this.viewPort = new Draw.DoubleBufferedPanel();
+            this.borderColorButton = new System.Windows.Forms.ToolStripButton();
             this.mainMenu.SuspendLayout();
             this.statusBar.SuspendLayout();
             this.speedMenu.SuspendLayout();
@@ -80,7 +83,7 @@
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItemClick);
             // 
@@ -132,7 +135,9 @@
             this.drawRectangleSpeedButton,
             this.pickUpSpeedButton,
             this.elipseStrButton,
-            this.triangleStrBtn});
+            this.triangleStrBtn,
+            this.fillColorStripButton,
+            this.borderColorButton});
             this.speedMenu.Location = new System.Drawing.Point(0, 25);
             this.speedMenu.Name = "speedMenu";
             this.speedMenu.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
@@ -183,9 +188,30 @@
             // saveToolStripMenuItem
             // 
             this.saveToolStripMenuItem.Name = "saveToolStripMenuItem";
-            this.saveToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
             this.saveToolStripMenuItem.Text = "Save";
             this.saveToolStripMenuItem.Click += new System.EventHandler(this.saveToolStripMenuItem_Click);
+            // 
+            // openToolStripMenuItem
+            // 
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            this.openToolStripMenuItem.Size = new System.Drawing.Size(103, 22);
+            this.openToolStripMenuItem.Text = "Open";
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
+            // 
+            // fillColorStripButton
+            // 
+            this.fillColorStripButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.fillColorStripButton.Image = ((System.Drawing.Image)(resources.GetObject("fillColorStripButton.Image")));
+            this.fillColorStripButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.fillColorStripButton.Name = "fillColorStripButton";
+            this.fillColorStripButton.Size = new System.Drawing.Size(23, 22);
+            this.fillColorStripButton.Text = "toolStripButton1";
+            this.fillColorStripButton.Click += new System.EventHandler(this.fillColorStripButton_Click);
             // 
             // viewPort
             // 
@@ -200,16 +226,15 @@
             this.viewPort.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ViewPortMouseMove);
             this.viewPort.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ViewPortMouseUp);
             // 
-            // openToolStripMenuItem
+            // borderColorButton
             // 
-            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
-            this.openToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.openToolStripMenuItem.Text = "Open";
-            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
-            // 
-            // openFileDialog1
-            // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.borderColorButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.borderColorButton.Image = ((System.Drawing.Image)(resources.GetObject("borderColorButton.Image")));
+            this.borderColorButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.borderColorButton.Name = "borderColorButton";
+            this.borderColorButton.Size = new System.Drawing.Size(23, 22);
+            this.borderColorButton.Text = "toolStripButton1";
+            this.borderColorButton.Click += new System.EventHandler(this.borderColorButton_Click);
             // 
             // MainForm
             // 
@@ -256,5 +281,8 @@
         private System.Windows.Forms.ToolStripMenuItem saveToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.ToolStripButton fillColorStripButton;
+        private System.Windows.Forms.ColorDialog colorDialog1;
+        private System.Windows.Forms.ToolStripButton borderColorButton;
     }
 }

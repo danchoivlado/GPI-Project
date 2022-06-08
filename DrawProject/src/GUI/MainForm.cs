@@ -141,5 +141,43 @@ namespace Draw
                 viewPort.Invalidate();
             }
         }
+
+        private void fillColorStripButton_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                var color = colorDialog1.Color;
+
+                foreach (var item in DialogProcessor.Selection)
+
+                {
+                    item.FillColor = color;
+                }
+
+                InvalidateViewPort("Последно действие: Промяна на вътрешният цвят");
+            }
+        }
+
+        private void InvalidateViewPort(string lastActionText)
+        {
+            statusBar.Items[0].Text = lastActionText;
+            viewPort.Invalidate();
+        }
+
+        private void borderColorButton_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                var color = colorDialog1.Color;
+
+                foreach (var item in DialogProcessor.Selection)
+
+                {
+                    item.BorderColor = color;
+                }
+
+                InvalidateViewPort("Последно действие: Промяна на цвета на рамката");
+            }
+        }
     }
 }

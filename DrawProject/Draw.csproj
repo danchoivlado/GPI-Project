@@ -52,6 +52,11 @@
     <Reference Include="System.Windows.Forms" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="src\AssemblyInfo.cs" />
     <Compile Include="src\GUI\DoubleBufferedPanel.cs">
       <SubType>UserControl</SubType>
@@ -72,6 +77,10 @@
     <Compile Include="src\Model\TriangleShape.cs" />
     <Compile Include="src\Processors\DialogProcessor.cs" />
     <Compile Include="src\Processors\DisplayProcessor.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="src\GUI\DoubleBufferedPanel.resx">
       <DependentUpon>DoubleBufferedPanel.cs</DependentUpon>
     </EmbeddedResource>
@@ -110,5 +119,11 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="ButtonImages\ellipse.png" />
+    <Content Include="ButtonImages\paint-bucket.png" />
+    <Content Include="ButtonImages\plain-triangle.png" />
   </ItemGroup>
 </Project>
