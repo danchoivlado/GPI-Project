@@ -41,8 +41,9 @@
             this.speedMenu = new System.Windows.Forms.ToolStrip();
             this.drawRectangleSpeedButton = new System.Windows.Forms.ToolStripButton();
             this.pickUpSpeedButton = new System.Windows.Forms.ToolStripButton();
-            this.viewPort = new Draw.DoubleBufferedPanel();
             this.elipseStrButton = new System.Windows.Forms.ToolStripButton();
+            this.viewPort = new Draw.DoubleBufferedPanel();
+            this.triangleStrBtn = new System.Windows.Forms.ToolStripButton();
             this.mainMenu.SuspendLayout();
             this.statusBar.SuspendLayout();
             this.speedMenu.SuspendLayout();
@@ -124,7 +125,8 @@
             this.speedMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.drawRectangleSpeedButton,
             this.pickUpSpeedButton,
-            this.elipseStrButton});
+            this.elipseStrButton,
+            this.triangleStrBtn});
             this.speedMenu.Location = new System.Drawing.Point(0, 25);
             this.speedMenu.Name = "speedMenu";
             this.speedMenu.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
@@ -152,6 +154,16 @@
             this.pickUpSpeedButton.Size = new System.Drawing.Size(23, 22);
             this.pickUpSpeedButton.Text = "toolStripButton1";
             // 
+            // elipseStrButton
+            // 
+            this.elipseStrButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.elipseStrButton.Image = ((System.Drawing.Image)(resources.GetObject("elipseStrButton.Image")));
+            this.elipseStrButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.elipseStrButton.Name = "elipseStrButton";
+            this.elipseStrButton.Size = new System.Drawing.Size(23, 22);
+            this.elipseStrButton.Text = "toolStripButton1";
+            this.elipseStrButton.Click += new System.EventHandler(this.elipseStrButton_Click);
+            // 
             // viewPort
             // 
             this.viewPort.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -165,15 +177,15 @@
             this.viewPort.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ViewPortMouseMove);
             this.viewPort.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ViewPortMouseUp);
             // 
-            // elipseStrButton
+            // triangleStrBtn
             // 
-            this.elipseStrButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.elipseStrButton.Image = ((System.Drawing.Image)(resources.GetObject("elipseStrButton.Image")));
-            this.elipseStrButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.elipseStrButton.Name = "elipseStrButton";
-            this.elipseStrButton.Size = new System.Drawing.Size(23, 22);
-            this.elipseStrButton.Text = "toolStripButton1";
-            this.elipseStrButton.Click += new System.EventHandler(this.elipseStrButton_Click);
+            this.triangleStrBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.triangleStrBtn.Image = ((System.Drawing.Image)(resources.GetObject("triangleStrBtn.Image")));
+            this.triangleStrBtn.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.triangleStrBtn.Name = "triangleStrBtn";
+            this.triangleStrBtn.Size = new System.Drawing.Size(23, 22);
+            this.triangleStrBtn.Text = "toolStripButton1";
+            this.triangleStrBtn.Click += new System.EventHandler(this.triangleStrBtn_Click);
             // 
             // MainForm
             // 
@@ -215,5 +227,6 @@
 		private System.Windows.Forms.StatusStrip statusBar;
 		private System.Windows.Forms.MenuStrip mainMenu;
         private System.Windows.Forms.ToolStripButton elipseStrButton;
+        private System.Windows.Forms.ToolStripButton triangleStrBtn;
     }
 }

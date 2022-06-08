@@ -90,6 +90,20 @@ namespace Draw
             ShapeList.Add(elp);
         }
 
+        public static void AddRandomTriangle()
+        {
+            Random rnd = new Random();
+            int x = rnd.Next(100, 1000);
+            int y = rnd.Next(100, 600);
+
+            TriangleShape tri = new TriangleShape(new Rectangle(x, y, 100, 200));
+            tri.FillColor = Color.White;
+            tri.BorderColor = Color.Black;
+            tri.Opacity = 255;
+
+            ShapeList.Add(tri);
+        }
+
         /// <summary>
         /// Проверява дали дадена точка е в елемента.
         /// Обхожда в ред обратен на визуализацията с цел намиране на

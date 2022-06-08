@@ -114,5 +114,14 @@ namespace Draw
 
             viewPort.Invalidate();
         }
+
+        private void triangleStrBtn_Click(object sender, EventArgs e)
+        {
+            DialogProcessor.AddRandomTriangle();
+
+            statusBar.Items[0].Text = "Последно действие: Рисуване на триъгълник";
+
+            viewPort.Invalidate();
+        }
     }
 }
