@@ -179,5 +179,12 @@ namespace Draw
                 InvalidateViewPort("Последно действие: Промяна на цвета на рамката");
             }
         }
+
+        private void exampleFigure_Click(object sender, EventArgs e)
+        {
+            DialogProcessor.AddRandomExample();
+
+            InvalidateViewPort("Последно действие: Рисуване на фигура");
+        }
     }
 }

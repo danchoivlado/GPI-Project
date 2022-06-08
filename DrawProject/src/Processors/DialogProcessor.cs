@@ -80,6 +80,22 @@ namespace Draw
             ShapeList.Add(rect);
         }
 
+        public static void AddRandomExample()
+        {
+            Random rnd = new Random();
+            int x = rnd.Next(100, 1000);
+            int y = rnd.Next(100, 600);
+
+            ExamShape exam = new ExamShape(new Rectangle(x, y, 300, 100));
+
+            exam.FillColor = Color.White;
+            exam.BorderColor = Color.Black;
+            exam.Opacity = 255;
+            exam.BorderWidth = 1;
+
+            ShapeList.Add(exam);
+        }
+
         public static void AddRandomEllipse()
         {
             Random rnd = new Random();

@@ -49,8 +49,9 @@
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.fillColorStripButton = new System.Windows.Forms.ToolStripButton();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.viewPort = new Draw.DoubleBufferedPanel();
             this.borderColorButton = new System.Windows.Forms.ToolStripButton();
+            this.exampleFigure = new System.Windows.Forms.ToolStripButton();
+            this.viewPort = new Draw.DoubleBufferedPanel();
             this.mainMenu.SuspendLayout();
             this.statusBar.SuspendLayout();
             this.speedMenu.SuspendLayout();
@@ -137,7 +138,8 @@
             this.elipseStrButton,
             this.triangleStrBtn,
             this.fillColorStripButton,
-            this.borderColorButton});
+            this.borderColorButton,
+            this.exampleFigure});
             this.speedMenu.Location = new System.Drawing.Point(0, 25);
             this.speedMenu.Name = "speedMenu";
             this.speedMenu.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
@@ -213,6 +215,26 @@
             this.fillColorStripButton.Text = "toolStripButton1";
             this.fillColorStripButton.Click += new System.EventHandler(this.fillColorStripButton_Click);
             // 
+            // borderColorButton
+            // 
+            this.borderColorButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.borderColorButton.Image = ((System.Drawing.Image)(resources.GetObject("borderColorButton.Image")));
+            this.borderColorButton.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.borderColorButton.Name = "borderColorButton";
+            this.borderColorButton.Size = new System.Drawing.Size(23, 22);
+            this.borderColorButton.Text = "toolStripButton1";
+            this.borderColorButton.Click += new System.EventHandler(this.borderColorButton_Click);
+            // 
+            // exampleFigure
+            // 
+            this.exampleFigure.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.exampleFigure.Image = ((System.Drawing.Image)(resources.GetObject("exampleFigure.Image")));
+            this.exampleFigure.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.exampleFigure.Name = "exampleFigure";
+            this.exampleFigure.Size = new System.Drawing.Size(23, 22);
+            this.exampleFigure.Text = "toolStripButton1";
+            this.exampleFigure.Click += new System.EventHandler(this.exampleFigure_Click);
+            // 
             // viewPort
             // 
             this.viewPort.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -225,16 +247,6 @@
             this.viewPort.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ViewPortMouseDown);
             this.viewPort.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ViewPortMouseMove);
             this.viewPort.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ViewPortMouseUp);
-            // 
-            // borderColorButton
-            // 
-            this.borderColorButton.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.borderColorButton.Image = ((System.Drawing.Image)(resources.GetObject("borderColorButton.Image")));
-            this.borderColorButton.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.borderColorButton.Name = "borderColorButton";
-            this.borderColorButton.Size = new System.Drawing.Size(23, 22);
-            this.borderColorButton.Text = "toolStripButton1";
-            this.borderColorButton.Click += new System.EventHandler(this.borderColorButton_Click);
             // 
             // MainForm
             // 
@@ -284,5 +296,6 @@
         private System.Windows.Forms.ToolStripButton fillColorStripButton;
         private System.Windows.Forms.ColorDialog colorDialog1;
         private System.Windows.Forms.ToolStripButton borderColorButton;
+        private System.Windows.Forms.ToolStripButton exampleFigure;
     }
 }
