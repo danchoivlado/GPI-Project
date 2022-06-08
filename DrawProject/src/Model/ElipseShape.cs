@@ -1,20 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
+using System.Linq;
+using System.Text;
 
-namespace Draw
+namespace Draw.src.Model
 {
-    /// <summary>
-    /// Класът правоъгълник е основен примитив, който е наследник на базовия Shape.
-    /// </summary>
-    public class RectangleShape : Shape
+    [Serializable]
+    public class ElipseShape : Shape
     {
+
         #region Constructor
 
-        public RectangleShape(RectangleF rect) : base(rect)
+        public ElipseShape(RectangleF elp) : base(elp)
         {
         }
 
-        public RectangleShape(RectangleShape rectangle) : base(rectangle)
+        public ElipseShape(ElipseShape elipsa) : base(elipsa)
         {
         }
 
@@ -30,9 +32,16 @@ namespace Draw
         public override bool Contains(PointF point)
         {
             if (base.Contains(point))
+            {
                 // Проверка дали е в обекта само, ако точката е в обхващащия правоъгълник.
                 // В случая на правоъгълник - директно връщаме true
-                return true;
+                float a = Width / 2;
+                float b = Height / 2;
+                float x0 = Location.X + a;
+                float y0 = Location.Y + b;
+
+                return Math.Pow((point.X - x0) / a, 2) + Math.Pow((point.Y - y0) / b, 2) - 1 <= 0;
+            }
             else
                 // Ако не е в обхващащия правоъгълник, то неможе да е в обекта и => false
                 return false;
@@ -45,8 +54,9 @@ namespace Draw
         {
             base.DrawSelf(grfx);
 
-            grfx.FillRectangle(new SolidBrush(Color.FromArgb(Opacity, FillColor)), Rectangle.X, Rectangle.Y, Rectangle.Width, Rectangle.Height);
-            grfx.DrawRectangle(new Pen(BorderColor, BorderWidth), Rectangle.X, Rectangle.Y, Rectangle.Width, Rectangle.Height);
+            grfx.FillEllipse(new SolidBrush(Color.FromArgb(Opacity, FillColor)), Rectangle.X, Rectangle.Y, Rectangle.Width, Rectangle.Height);
+            grfx.DrawEllipse(new Pen(BorderColor, BorderWidth), Rectangle.X, Rectangle.Y, Rectangle.Width, Rectangle.Height);
+
             grfx.ResetTransform();
 
         }
