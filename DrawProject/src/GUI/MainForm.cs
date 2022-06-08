@@ -105,5 +105,14 @@ namespace Draw
         {
             DialogProcessor.IsDragging = false;
         }
+
+        private void elipseStrButton_Click(object sender, EventArgs e)
+        {
+            DialogProcessor.AddRandomEllipse();
+
+            statusBar.Items[0].Text = "Последно действие: Рисуване на елипса";
+
+            viewPort.Invalidate();
+        }
     }
 }

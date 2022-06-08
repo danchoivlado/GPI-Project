@@ -77,7 +77,7 @@ namespace Draw
             ShapeList.Add(rect);
         }
 
-        public static void AddRandomEllipsa()
+        public static void AddRandomEllipse()
         {
             Random rnd = new Random();
             int x = rnd.Next(100, 1000);
