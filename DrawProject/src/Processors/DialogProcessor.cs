@@ -198,7 +198,7 @@ namespace Draw
             stream.Close();
         }
 
-        public static object ConvertStremFromOtheFile(string filePath = null)
+        public static object ConvertStream(string filePath = null)
         {
             object obj;
             IFormatter formatter = new BinaryFormatter();
@@ -336,6 +336,27 @@ namespace Draw
                 item.Opacity = opacity;
 
             }
+        }
+
+        public static void Copy()
+        {
+            ConvertToStream(Selection);
+        }
+
+        public static void Paste()
+        {
+            List<Shape> copyShapes = (List<Shape>)ConvertStream();
+            ShapeList.AddRange(copyShapes);
+        }
+
+        public static void Delete()
+        {
+            foreach (var item in Selection)
+            {
+                ShapeList.Remove(item);
+
+            }
+            Selection.Clear();
         }
 
     }

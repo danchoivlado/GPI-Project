@@ -138,7 +138,7 @@ namespace Draw
         {
             if (openFileDialog1.ShowDialog() == System.Windows.Forms.DialogResult.OK)
             {
-                DialogProcessor.ShapeList = (List<Shape>)DialogProcessor.ConvertStremFromOtheFile(openFileDialog1.FileName);
+                DialogProcessor.ShapeList = (List<Shape>)DialogProcessor.ConvertStream(openFileDialog1.FileName);
                 viewPort.Invalidate();
             }
         }
@@ -253,6 +253,38 @@ namespace Draw
         {
             DialogProcessor.SetOpacity(trackBar1.Value);
             InvalidateViewPort("Добавяне на прозрачност");
+        }
+
+        private void copyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogProcessor.Copy();
+            InvalidateViewPort("Копиране");
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pasteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                DialogProcessor.Paste();
+                InvalidateViewPort("Поставяне");
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Не сте копирали нищо");
+            }
+
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogProcessor.Delete();
+            InvalidateViewPort("Изтриване");
+
         }
     }
 }
