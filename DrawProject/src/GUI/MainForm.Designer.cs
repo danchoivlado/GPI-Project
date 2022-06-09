@@ -58,6 +58,9 @@
             this.heightTextBox = new System.Windows.Forms.TextBox();
             this.heightLabel = new System.Windows.Forms.Label();
             this.Resize = new System.Windows.Forms.Button();
+            this.bordeWodthTextBox = new System.Windows.Forms.TextBox();
+            this.borderWidthLabel = new System.Windows.Forms.Label();
+            this.borderWidthButton = new System.Windows.Forms.Button();
             this.viewPort = new Draw.DoubleBufferedPanel();
             this.mainMenu.SuspendLayout();
             this.statusBar.SuspendLayout();
@@ -308,6 +311,34 @@
             this.Resize.UseVisualStyleBackColor = true;
             this.Resize.Click += new System.EventHandler(this.Resize_Click);
             // 
+            // bordeWodthTextBox
+            // 
+            this.bordeWodthTextBox.Location = new System.Drawing.Point(707, 8);
+            this.bordeWodthTextBox.Name = "bordeWodthTextBox";
+            this.bordeWodthTextBox.Size = new System.Drawing.Size(61, 26);
+            this.bordeWodthTextBox.TabIndex = 11;
+            // 
+            // borderWidthLabel
+            // 
+            this.borderWidthLabel.AutoSize = true;
+            this.borderWidthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.borderWidthLabel.Location = new System.Drawing.Point(714, 42);
+            this.borderWidthLabel.Name = "borderWidthLabel";
+            this.borderWidthLabel.Size = new System.Drawing.Size(95, 18);
+            this.borderWidthLabel.TabIndex = 10;
+            this.borderWidthLabel.Text = "Border Width";
+            // 
+            // borderWidthButton
+            // 
+            this.borderWidthButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.borderWidthButton.Location = new System.Drawing.Point(774, 8);
+            this.borderWidthButton.Name = "borderWidthButton";
+            this.borderWidthButton.Size = new System.Drawing.Size(64, 27);
+            this.borderWidthButton.TabIndex = 12;
+            this.borderWidthButton.Text = "set";
+            this.borderWidthButton.UseVisualStyleBackColor = true;
+            this.borderWidthButton.Click += new System.EventHandler(this.borderWidthButton_Click);
+            // 
             // viewPort
             // 
             this.viewPort.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -326,6 +357,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1040, 651);
+            this.Controls.Add(this.borderWidthButton);
+            this.Controls.Add(this.bordeWodthTextBox);
+            this.Controls.Add(this.borderWidthLabel);
             this.Controls.Add(this.Resize);
             this.Controls.Add(this.heightTextBox);
             this.Controls.Add(this.heightLabel);
@@ -382,5 +416,8 @@
         private System.Windows.Forms.TextBox heightTextBox;
         private System.Windows.Forms.Label heightLabel;
         private System.Windows.Forms.Button Resize;
+        private System.Windows.Forms.TextBox bordeWodthTextBox;
+        private System.Windows.Forms.Label borderWidthLabel;
+        private System.Windows.Forms.Button borderWidthButton;
     }
 }

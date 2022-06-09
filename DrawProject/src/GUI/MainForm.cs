@@ -238,5 +238,15 @@ namespace Draw
             }
             InvalidateViewPort("Resize");
         }
+
+        private void borderWidthButton_Click(object sender, EventArgs e)
+        {
+            float borderWidth;
+            if (float.TryParse(bordeWodthTextBox.Text == "" ? "1" : bordeWodthTextBox.Text, out borderWidth))
+                DialogProcessor.SetBorderWidth(borderWidth);
+            else
+                MessageBox.Show("Invalid numbers");
+            InvalidateViewPort("Промяна на дебелината на линията");
+        }
     }
 }

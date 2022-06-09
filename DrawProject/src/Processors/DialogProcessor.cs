@@ -307,5 +307,21 @@ namespace Draw
                 }
             }
         }
+
+        public static void SetBorderWidth(float borderWidth)
+        {
+            if (borderWidth >= 1)
+            {
+                foreach (var item in Selection)
+                {
+                    if (item.GetType().Equals(typeof(ShapeGroup)))
+                    {
+                        ((ShapeGroup)item).GroupBorderWidth(borderWidth);
+                    }
+                    item.BorderWidth = borderWidth;
+
+                }
+            }
+        }
     }
 }

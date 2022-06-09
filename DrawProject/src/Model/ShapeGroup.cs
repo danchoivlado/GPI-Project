@@ -136,5 +136,14 @@ namespace Draw
             this.Rectangle = new RectangleF(this.Rectangle.X, minY, this.Rectangle.Width, maxY - minY);
 
         }
+
+        public void GroupBorderWidth(float borderWidth)
+        {
+            BorderWidth = borderWidth;
+            foreach (var item in SubItem)
+            {
+                item.BorderWidth = borderWidth;
+            }
+        }
     }
 }
