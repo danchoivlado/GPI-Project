@@ -248,5 +248,11 @@ namespace Draw
                 MessageBox.Show("Invalid numbers");
             InvalidateViewPort("Промяна на дебелината на линията");
         }
+
+        private void trackBar1_Scroll(object sender, EventArgs e)
+        {
+            DialogProcessor.SetOpacity(trackBar1.Value);
+            InvalidateViewPort("Добавяне на прозрачност");
+        }
     }
 }

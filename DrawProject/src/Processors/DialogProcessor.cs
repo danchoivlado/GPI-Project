@@ -323,5 +323,20 @@ namespace Draw
                 }
             }
         }
+
+        public static void SetOpacity(int opacity, string btn = " ")
+        {
+            foreach (var item in Selection)
+
+            {
+                if (item.GetType().Equals(typeof(ShapeGroup)))
+                {
+                    ((ShapeGroup)item).GroupOpacity(opacity);
+                }
+                item.Opacity = opacity;
+
+            }
+        }
+
     }
 }

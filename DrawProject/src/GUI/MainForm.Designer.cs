@@ -61,10 +61,13 @@
             this.bordeWodthTextBox = new System.Windows.Forms.TextBox();
             this.borderWidthLabel = new System.Windows.Forms.Label();
             this.borderWidthButton = new System.Windows.Forms.Button();
+            this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.viewPort = new Draw.DoubleBufferedPanel();
+            this.label3 = new System.Windows.Forms.Label();
             this.mainMenu.SuspendLayout();
             this.statusBar.SuspendLayout();
             this.speedMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
             this.SuspendLayout();
             // 
             // mainMenu
@@ -77,7 +80,7 @@
             this.mainMenu.Location = new System.Drawing.Point(0, 0);
             this.mainMenu.Name = "mainMenu";
             this.mainMenu.Padding = new System.Windows.Forms.Padding(9, 3, 0, 3);
-            this.mainMenu.Size = new System.Drawing.Size(1040, 25);
+            this.mainMenu.Size = new System.Drawing.Size(1201, 25);
             this.mainMenu.TabIndex = 1;
             this.mainMenu.Text = "menuStrip1";
             // 
@@ -145,7 +148,7 @@
             this.statusBar.Location = new System.Drawing.Point(0, 629);
             this.statusBar.Name = "statusBar";
             this.statusBar.Padding = new System.Windows.Forms.Padding(2, 0, 21, 0);
-            this.statusBar.Size = new System.Drawing.Size(1040, 22);
+            this.statusBar.Size = new System.Drawing.Size(1201, 22);
             this.statusBar.TabIndex = 2;
             this.statusBar.Text = "statusStrip1";
             // 
@@ -169,7 +172,7 @@
             this.speedMenu.Location = new System.Drawing.Point(0, 25);
             this.speedMenu.Name = "speedMenu";
             this.speedMenu.Padding = new System.Windows.Forms.Padding(0, 0, 2, 0);
-            this.speedMenu.Size = new System.Drawing.Size(1040, 25);
+            this.speedMenu.Size = new System.Drawing.Size(1201, 25);
             this.speedMenu.TabIndex = 3;
             this.speedMenu.Text = "toolStrip1";
             // 
@@ -339,24 +342,49 @@
             this.borderWidthButton.UseVisualStyleBackColor = true;
             this.borderWidthButton.Click += new System.EventHandler(this.borderWidthButton_Click);
             // 
+            // trackBar1
+            // 
+            this.trackBar1.Location = new System.Drawing.Point(894, 8);
+            this.trackBar1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.trackBar1.Maximum = 255;
+            this.trackBar1.Name = "trackBar1";
+            this.trackBar1.Size = new System.Drawing.Size(266, 45);
+            this.trackBar1.TabIndex = 13;
+            this.trackBar1.Tag = "";
+            this.trackBar1.TickStyle = System.Windows.Forms.TickStyle.None;
+            this.trackBar1.Value = 255;
+            this.trackBar1.Scroll += new System.EventHandler(this.trackBar1_Scroll);
+            // 
             // viewPort
             // 
             this.viewPort.Dock = System.Windows.Forms.DockStyle.Fill;
             this.viewPort.Location = new System.Drawing.Point(0, 50);
             this.viewPort.Margin = new System.Windows.Forms.Padding(6, 8, 6, 8);
             this.viewPort.Name = "viewPort";
-            this.viewPort.Size = new System.Drawing.Size(1040, 579);
+            this.viewPort.Size = new System.Drawing.Size(1201, 579);
             this.viewPort.TabIndex = 4;
             this.viewPort.Paint += new System.Windows.Forms.PaintEventHandler(this.ViewPortPaint);
             this.viewPort.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ViewPortMouseDown);
             this.viewPort.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ViewPortMouseMove);
             this.viewPort.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ViewPortMouseUp);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(991, 30);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(62, 20);
+            this.label3.TabIndex = 19;
+            this.label3.Text = "Opacity";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1040, 651);
+            this.ClientSize = new System.Drawing.Size(1201, 651);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.borderWidthButton);
             this.Controls.Add(this.bordeWodthTextBox);
             this.Controls.Add(this.borderWidthLabel);
@@ -381,6 +409,7 @@
             this.statusBar.PerformLayout();
             this.speedMenu.ResumeLayout(false);
             this.speedMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.trackBar1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -419,5 +448,7 @@
         private System.Windows.Forms.TextBox bordeWodthTextBox;
         private System.Windows.Forms.Label borderWidthLabel;
         private System.Windows.Forms.Button borderWidthButton;
+        private System.Windows.Forms.TrackBar trackBar1;
+        private System.Windows.Forms.Label label3;
     }
 }
