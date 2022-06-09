@@ -94,5 +94,47 @@ namespace Draw
                 item.Location = new PointF(this.Location.X + (item.Location.X - point.X), this.Location.Y - (point.Y - item.Location.Y));
             }
         }
+        public void GroupReSizeWidth(float width)
+        {
+            Width = width;
+            float maxX = float.MinValue;
+            float minX = float.MaxValue;
+            foreach (var item in SubItem)
+            {
+                item.Width = width;
+                if (minX > item.Location.X)
+                {
+                    minX = item.Location.X;
+                }
+                if (maxX < item.Location.X + item.Width)
+                {
+                    maxX = item.Location.X + item.Width;
+                }
+
+            }
+            this.Rectangle = new RectangleF(minX, this.Rectangle.Y, maxX - minX, this.Rectangle.Height);
+        }
+
+        public void GroupReSizeHeight(float height)
+        {
+            Height = height;
+            float maxY = float.NegativeInfinity;
+            float minY = float.PositiveInfinity;
+            foreach (var item in SubItem)
+            {
+                item.Height = height;
+                if (minY > item.Location.Y)
+                {
+                    minY = item.Location.Y;
+                }
+                if (maxY < item.Location.Y + item.Height)
+                {
+                    maxY = item.Location.Y + item.Height;
+                }
+
+            }
+            this.Rectangle = new RectangleF(this.Rectangle.X, minY, this.Rectangle.Width, maxY - minY);
+
+        }
     }
 }

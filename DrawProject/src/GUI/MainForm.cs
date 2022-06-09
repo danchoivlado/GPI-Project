@@ -209,5 +209,34 @@ namespace Draw
             DialogProcessor.RemoveGroup();
             InvalidateViewPort("Премахваме групата");
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Resize_Click(object sender, EventArgs e)
+        {
+            float width;
+            float height;
+            if (float.TryParse(widthTextBox.Text == "" ? "-1" : widthTextBox.Text, out width) && float.TryParse(heightTextBox.Text == "" ? "-1" : heightTextBox.Text, out height))
+            {
+                width = width < 0 ? -1 : width;
+                height = height < 0 ? -1 : height;
+                DialogProcessor.SetSize(width, height);
+            }
+            else
+            {
+                MessageBox.Show("Invalid numbers");
+
+            }
+            InvalidateViewPort("Resize");
+        }
     }
 }

@@ -277,5 +277,35 @@ namespace Draw
                 }
             }
         }
+
+        public static void SetSize(float width, float height)
+        {
+            foreach (var item in Selection)
+
+            {
+                if (width > -1)
+                {
+                    if (item.GetType().Equals(typeof(ShapeGroup)))
+                    {
+                        ((ShapeGroup)item).GroupReSizeWidth(width);
+                    }
+                    else
+                    {
+                        item.Width = width;
+                    }
+                }
+                if (height > -1)
+                {
+                    if (item.GetType().Equals(typeof(ShapeGroup)))
+                    {
+                        ((ShapeGroup)item).GroupReSizeHeight(height);
+                    }
+                    else
+                    {
+                        item.Height = height;
+                    }
+                }
+            }
+        }
     }
 }
