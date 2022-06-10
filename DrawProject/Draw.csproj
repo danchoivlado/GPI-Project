@@ -71,8 +71,15 @@
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
     <Compile Include="src\GUI\Program.cs" />
+    <Compile Include="src\Model\ExamShapeFive.cs" />
     <Compile Include="src\Model\ElipseShape.cs" />
     <Compile Include="src\Model\ExamShape.cs" />
+    <Compile Include="src\Model\ExamShapeEight.cs" />
+    <Compile Include="src\Model\ExamShapeNine.cs" />
+    <Compile Include="src\Model\ExamShapeOne.cs" />
+    <Compile Include="src\Model\ExamShapePolygon.cs" />
+    <Compile Include="src\Model\ExamShapeTwo.cs" />
+    <Compile Include="src\Model\ExamShapeZero.cs" />
     <Compile Include="src\Model\ShapeGroup.cs" />
     <Compile Include="src\Model\RectangleShape.cs" />
     <Compile Include="src\Model\Shape.cs" />

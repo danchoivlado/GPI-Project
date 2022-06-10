@@ -221,23 +221,6 @@ namespace Draw
 
         }
 
-        private void Resize_Click(object sender, EventArgs e)
-        {
-            float width;
-            float height;
-            if (float.TryParse(widthTextBox.Text == "" ? "-1" : widthTextBox.Text, out width) && float.TryParse(heightTextBox.Text == "" ? "-1" : heightTextBox.Text, out height))
-            {
-                width = width < 0 ? -1 : width;
-                height = height < 0 ? -1 : height;
-                DialogProcessor.SetSize(width, height);
-            }
-            else
-            {
-                MessageBox.Show("Invalid numbers");
-
-            }
-            InvalidateViewPort("Resize");
-        }
 
         private void borderWidthButton_Click(object sender, EventArgs e)
         {
@@ -285,6 +268,49 @@ namespace Draw
             DialogProcessor.Delete();
             InvalidateViewPort("Изтриване");
 
+        }
+
+        private void examShape9_Click(object sender, EventArgs e)
+        {
+            DialogProcessor.AddRandomExamShape();
+            InvalidateViewPort("asd");
+        }
+
+        private void examShapPolygon_Click(object sender, EventArgs e)
+        {
+            DialogProcessor.AddRandomExamShapePolygon();
+            InvalidateViewPort("asd");
+        }
+
+        private void examShapeZero_Click(object sender, EventArgs e)
+        {
+            DialogProcessor.AddRandomExamShapeZero();
+            InvalidateViewPort("asd");
+
+        }
+
+        private void examShapeOne_Click(object sender, EventArgs e)
+        {
+            DialogProcessor.AddRandomExamShapeOne();
+            InvalidateViewPort("asd");
+        }
+
+        private void examShapeEight_Click(object sender, EventArgs e)
+        {
+            DialogProcessor.AddRandomExamShapeEight();
+            InvalidateViewPort("asd");
+        }
+
+        private void examShapeFive_Click(object sender, EventArgs e)
+        {
+            DialogProcessor.AddRandomExamShapeFive();
+            InvalidateViewPort("asd");
+        }
+
+        private void examShapeTwo_Click(object sender, EventArgs e)
+        {
+            DialogProcessor.AddRandomExamShapeTwo();
+            InvalidateViewPort("asd");
         }
     }
 }

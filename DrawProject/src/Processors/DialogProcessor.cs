@@ -359,5 +359,98 @@ namespace Draw
             Selection.Clear();
         }
 
+        public static void AddRandomExamShape()
+        {
+            Random rnd = new Random();
+            int x = rnd.Next(100, 1000);
+            int y = rnd.Next(100, 600);
+
+            ExamShapeNine elp = new ExamShapeNine(new Rectangle(x, y, 300, 300)); // x,y => nachalna tochka
+            elp.FillColor = Color.White;
+            elp.BorderColor = Color.Black;
+            elp.Opacity = 255;
+            ShapeList.Add(elp);
+        }
+
+        public static void AddRandomExamShapePolygon()
+        {
+            Random rnd = new Random();
+            int x = rnd.Next(100, 1000);
+            int y = rnd.Next(100, 600);
+
+            ExamShapePolygon tri = new ExamShapePolygon(new Rectangle(x, y, 200, 200));
+            tri.FillColor = Color.White;
+            tri.BorderColor = Color.Black;
+            tri.Opacity = 255;
+
+            ShapeList.Add(tri);
+        }
+
+        public static void AddRandomExamShapeZero()
+        {
+            Random rnd = new Random();
+            int x = rnd.Next(100, 1000);
+            int y = rnd.Next(100, 600);
+
+            ExamShapeZero tri = new ExamShapeZero(new Rectangle(x, y, 100, 200));
+            tri.FillColor = Color.White;
+            tri.BorderColor = Color.Black;
+            tri.Opacity = 255;
+
+            ShapeList.Add(tri);
+        }
+
+        public static void AddRandomExamShapeOne()
+        {
+            Random rnd = new Random();
+            int x = rnd.Next(100, 1000);
+            int y = rnd.Next(100, 600);
+
+            ExamShapeOne elp = new ExamShapeOne(new Rectangle(x, y, 300, 300));
+            elp.FillColor = Color.White;
+            elp.BorderColor = Color.Black;
+            elp.Opacity = 255;
+            ShapeList.Add(elp);
+        }
+
+        public static void AddRandomExamShapeEight()
+        {
+            Random rnd = new Random();
+            int x = rnd.Next(100, 1000);
+            int y = rnd.Next(100, 600);
+
+            ExamShapeEight tri = new ExamShapeEight(new Rectangle(x, y, 400, 200));
+            tri.FillColor = Color.White;
+            tri.BorderColor = Color.Black;
+            tri.Opacity = 255;
+
+            ShapeList.Add(tri);
+        }
+
+        public static void AddRandomExamShapeFive()
+        {
+            Random rnd = new Random();
+            int x = rnd.Next(100, 1000);
+            int y = rnd.Next(100, 600);
+
+            ExamShapeFive elp = new ExamShapeFive(new Rectangle(x, y, 300, 300));
+            elp.FillColor = Color.White;
+            elp.BorderColor = Color.Black;
+            elp.Opacity = 255;
+            ShapeList.Add(elp);
+        }
+
+        public static void AddRandomExamShapeTwo()
+        {
+            Random rnd = new Random();
+            int x = rnd.Next(100, 1000);
+            int y = rnd.Next(100, 600);
+
+            ExamShapeTwo elp = new ExamShapeTwo(new Rectangle(x, y, 300, 150));
+            elp.FillColor = Color.White;
+            elp.BorderColor = Color.Black;
+            elp.Opacity = 255;
+            ShapeList.Add(elp);
+        }
     }
 }

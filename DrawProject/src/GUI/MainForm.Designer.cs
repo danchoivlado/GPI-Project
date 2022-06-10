@@ -53,20 +53,22 @@
             this.exampleFigure = new System.Windows.Forms.ToolStripButton();
             this.groupSelectedButton = new System.Windows.Forms.ToolStripButton();
             this.removeGroupButton = new System.Windows.Forms.ToolStripButton();
+            this.examShape9 = new System.Windows.Forms.ToolStripButton();
+            this.examShapPolygon = new System.Windows.Forms.ToolStripButton();
+            this.examShapeZero = new System.Windows.Forms.ToolStripButton();
+            this.examShapeOne = new System.Windows.Forms.ToolStripButton();
+            this.examShapeEight = new System.Windows.Forms.ToolStripButton();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
-            this.widthLabel = new System.Windows.Forms.Label();
-            this.widthTextBox = new System.Windows.Forms.TextBox();
-            this.heightTextBox = new System.Windows.Forms.TextBox();
-            this.heightLabel = new System.Windows.Forms.Label();
-            this.Resize = new System.Windows.Forms.Button();
             this.bordeWodthTextBox = new System.Windows.Forms.TextBox();
             this.borderWidthLabel = new System.Windows.Forms.Label();
             this.borderWidthButton = new System.Windows.Forms.Button();
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.label3 = new System.Windows.Forms.Label();
+            this.examShapeFive = new System.Windows.Forms.ToolStripButton();
             this.viewPort = new Draw.DoubleBufferedPanel();
+            this.examShapeTwo = new System.Windows.Forms.ToolStripButton();
             this.mainMenu.SuspendLayout();
             this.statusBar.SuspendLayout();
             this.speedMenu.SuspendLayout();
@@ -82,7 +84,7 @@
             this.helpToolStripMenuItem});
             this.mainMenu.Location = new System.Drawing.Point(0, 0);
             this.mainMenu.Name = "mainMenu";
-            this.mainMenu.Size = new System.Drawing.Size(801, 24);
+            this.mainMenu.Size = new System.Drawing.Size(938, 24);
             this.mainMenu.TabIndex = 1;
             this.mainMenu.Text = "menuStrip1";
             // 
@@ -175,7 +177,7 @@
             this.currentStatusLabel});
             this.statusBar.Location = new System.Drawing.Point(0, 401);
             this.statusBar.Name = "statusBar";
-            this.statusBar.Size = new System.Drawing.Size(801, 22);
+            this.statusBar.Size = new System.Drawing.Size(938, 22);
             this.statusBar.TabIndex = 2;
             this.statusBar.Text = "statusStrip1";
             // 
@@ -195,10 +197,17 @@
             this.borderColorButton,
             this.exampleFigure,
             this.groupSelectedButton,
-            this.removeGroupButton});
+            this.removeGroupButton,
+            this.examShape9,
+            this.examShapPolygon,
+            this.examShapeZero,
+            this.examShapeOne,
+            this.examShapeEight,
+            this.examShapeFive,
+            this.examShapeTwo});
             this.speedMenu.Location = new System.Drawing.Point(0, 24);
             this.speedMenu.Name = "speedMenu";
-            this.speedMenu.Size = new System.Drawing.Size(801, 25);
+            this.speedMenu.Size = new System.Drawing.Size(938, 25);
             this.speedMenu.TabIndex = 3;
             this.speedMenu.Text = "toolStrip1";
             // 
@@ -292,63 +301,64 @@
             this.removeGroupButton.Text = "toolStripButton1";
             this.removeGroupButton.Click += new System.EventHandler(this.removeGroupButton_Click);
             // 
+            // examShape9
+            // 
+            this.examShape9.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.examShape9.Image = ((System.Drawing.Image)(resources.GetObject("examShape9.Image")));
+            this.examShape9.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.examShape9.Name = "examShape9";
+            this.examShape9.Size = new System.Drawing.Size(23, 22);
+            this.examShape9.Text = "examShape9";
+            this.examShape9.Click += new System.EventHandler(this.examShape9_Click);
+            // 
+            // examShapPolygon
+            // 
+            this.examShapPolygon.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.examShapPolygon.Image = ((System.Drawing.Image)(resources.GetObject("examShapPolygon.Image")));
+            this.examShapPolygon.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.examShapPolygon.Name = "examShapPolygon";
+            this.examShapPolygon.Size = new System.Drawing.Size(23, 22);
+            this.examShapPolygon.Text = "examShapPolygon";
+            this.examShapPolygon.Click += new System.EventHandler(this.examShapPolygon_Click);
+            // 
+            // examShapeZero
+            // 
+            this.examShapeZero.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.examShapeZero.Image = ((System.Drawing.Image)(resources.GetObject("examShapeZero.Image")));
+            this.examShapeZero.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.examShapeZero.Name = "examShapeZero";
+            this.examShapeZero.Size = new System.Drawing.Size(23, 22);
+            this.examShapeZero.Text = "examShapeZeroButton";
+            this.examShapeZero.Click += new System.EventHandler(this.examShapeZero_Click);
+            // 
+            // examShapeOne
+            // 
+            this.examShapeOne.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.examShapeOne.Image = ((System.Drawing.Image)(resources.GetObject("examShapeOne.Image")));
+            this.examShapeOne.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.examShapeOne.Name = "examShapeOne";
+            this.examShapeOne.Size = new System.Drawing.Size(23, 22);
+            this.examShapeOne.Text = "examShapeOne";
+            this.examShapeOne.Click += new System.EventHandler(this.examShapeOne_Click);
+            // 
+            // examShapeEight
+            // 
+            this.examShapeEight.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.examShapeEight.Image = ((System.Drawing.Image)(resources.GetObject("examShapeEight.Image")));
+            this.examShapeEight.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.examShapeEight.Name = "examShapeEight";
+            this.examShapeEight.Size = new System.Drawing.Size(23, 22);
+            this.examShapeEight.Text = "examShapeEight";
+            this.examShapeEight.Click += new System.EventHandler(this.examShapeEight_Click);
+            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
-            // widthLabel
-            // 
-            this.widthLabel.AutoSize = true;
-            this.widthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.widthLabel.Location = new System.Drawing.Point(250, 25);
-            this.widthLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.widthLabel.Name = "widthLabel";
-            this.widthLabel.Size = new System.Drawing.Size(56, 22);
-            this.widthLabel.TabIndex = 5;
-            this.widthLabel.Text = "Width";
-            // 
-            // widthTextBox
-            // 
-            this.widthTextBox.Location = new System.Drawing.Point(323, 25);
-            this.widthTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.widthTextBox.Name = "widthTextBox";
-            this.widthTextBox.Size = new System.Drawing.Size(42, 20);
-            this.widthTextBox.TabIndex = 6;
-            // 
-            // heightTextBox
-            // 
-            this.heightTextBox.Location = new System.Drawing.Point(323, 0);
-            this.heightTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.heightTextBox.Name = "heightTextBox";
-            this.heightTextBox.Size = new System.Drawing.Size(42, 20);
-            this.heightTextBox.TabIndex = 8;
-            // 
-            // heightLabel
-            // 
-            this.heightLabel.AutoSize = true;
-            this.heightLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.heightLabel.Location = new System.Drawing.Point(250, 0);
-            this.heightLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.heightLabel.Name = "heightLabel";
-            this.heightLabel.Size = new System.Drawing.Size(62, 22);
-            this.heightLabel.TabIndex = 7;
-            this.heightLabel.Text = "Height";
-            // 
-            // Resize
-            // 
-            this.Resize.Location = new System.Drawing.Point(382, 5);
-            this.Resize.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.Resize.Name = "Resize";
-            this.Resize.Size = new System.Drawing.Size(60, 34);
-            this.Resize.TabIndex = 9;
-            this.Resize.Text = "Resize";
-            this.Resize.UseVisualStyleBackColor = true;
-            this.Resize.Click += new System.EventHandler(this.Resize_Click);
-            // 
             // bordeWodthTextBox
             // 
-            this.bordeWodthTextBox.Location = new System.Drawing.Point(471, 5);
-            this.bordeWodthTextBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bordeWodthTextBox.Location = new System.Drawing.Point(523, 4);
+            this.bordeWodthTextBox.Margin = new System.Windows.Forms.Padding(2);
             this.bordeWodthTextBox.Name = "bordeWodthTextBox";
             this.bordeWodthTextBox.Size = new System.Drawing.Size(42, 20);
             this.bordeWodthTextBox.TabIndex = 11;
@@ -357,7 +367,7 @@
             // 
             this.borderWidthLabel.AutoSize = true;
             this.borderWidthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.borderWidthLabel.Location = new System.Drawing.Point(475, 27);
+            this.borderWidthLabel.Location = new System.Drawing.Point(527, 26);
             this.borderWidthLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.borderWidthLabel.Name = "borderWidthLabel";
             this.borderWidthLabel.Size = new System.Drawing.Size(95, 18);
@@ -367,8 +377,8 @@
             // borderWidthButton
             // 
             this.borderWidthButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.borderWidthButton.Location = new System.Drawing.Point(516, 5);
-            this.borderWidthButton.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.borderWidthButton.Location = new System.Drawing.Point(568, 4);
+            this.borderWidthButton.Margin = new System.Windows.Forms.Padding(2);
             this.borderWidthButton.Name = "borderWidthButton";
             this.borderWidthButton.Size = new System.Drawing.Size(43, 18);
             this.borderWidthButton.TabIndex = 12;
@@ -378,7 +388,7 @@
             // 
             // trackBar1
             // 
-            this.trackBar1.Location = new System.Drawing.Point(596, 5);
+            this.trackBar1.Location = new System.Drawing.Point(648, 4);
             this.trackBar1.Maximum = 255;
             this.trackBar1.Name = "trackBar1";
             this.trackBar1.Size = new System.Drawing.Size(177, 45);
@@ -391,11 +401,21 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(661, 20);
+            this.label3.Location = new System.Drawing.Point(713, 19);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(43, 13);
             this.label3.TabIndex = 19;
             this.label3.Text = "Opacity";
+            // 
+            // examShapeFive
+            // 
+            this.examShapeFive.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.examShapeFive.Image = ((System.Drawing.Image)(resources.GetObject("examShapeFive.Image")));
+            this.examShapeFive.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.examShapeFive.Name = "examShapeFive";
+            this.examShapeFive.Size = new System.Drawing.Size(23, 22);
+            this.examShapeFive.Text = "examShapeFive";
+            this.examShapeFive.Click += new System.EventHandler(this.examShapeFive_Click);
             // 
             // viewPort
             // 
@@ -403,28 +423,33 @@
             this.viewPort.Location = new System.Drawing.Point(0, 49);
             this.viewPort.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.viewPort.Name = "viewPort";
-            this.viewPort.Size = new System.Drawing.Size(801, 352);
+            this.viewPort.Size = new System.Drawing.Size(938, 352);
             this.viewPort.TabIndex = 4;
             this.viewPort.Paint += new System.Windows.Forms.PaintEventHandler(this.ViewPortPaint);
             this.viewPort.MouseDown += new System.Windows.Forms.MouseEventHandler(this.ViewPortMouseDown);
             this.viewPort.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ViewPortMouseMove);
             this.viewPort.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ViewPortMouseUp);
             // 
+            // examShapeTwo
+            // 
+            this.examShapeTwo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.examShapeTwo.Image = ((System.Drawing.Image)(resources.GetObject("examShapeTwo.Image")));
+            this.examShapeTwo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.examShapeTwo.Name = "examShapeTwo";
+            this.examShapeTwo.Size = new System.Drawing.Size(23, 22);
+            this.examShapeTwo.Text = "examShapeTwo";
+            this.examShapeTwo.Click += new System.EventHandler(this.examShapeTwo_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 423);
+            this.ClientSize = new System.Drawing.Size(938, 423);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.trackBar1);
             this.Controls.Add(this.borderWidthButton);
             this.Controls.Add(this.bordeWodthTextBox);
             this.Controls.Add(this.borderWidthLabel);
-            this.Controls.Add(this.Resize);
-            this.Controls.Add(this.heightTextBox);
-            this.Controls.Add(this.heightLabel);
-            this.Controls.Add(this.widthTextBox);
-            this.Controls.Add(this.widthLabel);
             this.Controls.Add(this.viewPort);
             this.Controls.Add(this.speedMenu);
             this.Controls.Add(this.statusBar);
@@ -471,11 +496,6 @@
         private System.Windows.Forms.ToolStripButton exampleFigure;
         private System.Windows.Forms.ToolStripButton groupSelectedButton;
         private System.Windows.Forms.ToolStripButton removeGroupButton;
-        private System.Windows.Forms.Label widthLabel;
-        private System.Windows.Forms.TextBox widthTextBox;
-        private System.Windows.Forms.TextBox heightTextBox;
-        private System.Windows.Forms.Label heightLabel;
-        private System.Windows.Forms.Button Resize;
         private System.Windows.Forms.TextBox bordeWodthTextBox;
         private System.Windows.Forms.Label borderWidthLabel;
         private System.Windows.Forms.Button borderWidthButton;
@@ -484,5 +504,12 @@
         private System.Windows.Forms.ToolStripMenuItem copyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem pasteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem deleteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripButton examShape9;
+        private System.Windows.Forms.ToolStripButton examShapPolygon;
+        private System.Windows.Forms.ToolStripButton examShapeZero;
+        private System.Windows.Forms.ToolStripButton examShapeOne;
+        private System.Windows.Forms.ToolStripButton examShapeEight;
+        private System.Windows.Forms.ToolStripButton examShapeFive;
+        private System.Windows.Forms.ToolStripButton examShapeTwo;
     }
 }
