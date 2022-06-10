@@ -1,4 +1,5 @@
 ﻿using Draw.src.Model;
+using Draw.src.Model.ExamShapes;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -447,6 +448,32 @@ namespace Draw
             int y = rnd.Next(100, 600);
 
             ExamShapeTwo elp = new ExamShapeTwo(new Rectangle(x, y, 300, 150));
+            elp.FillColor = Color.White;
+            elp.BorderColor = Color.Black;
+            elp.Opacity = 255;
+            ShapeList.Add(elp);
+        }
+
+        public static void AddRandomExamShapeThree()
+        {
+            Random rnd = new Random();
+            int x = rnd.Next(100, 1000);
+            int y = rnd.Next(100, 600);
+
+            ExamShapeThree elp = new ExamShapeThree(new Rectangle(x, y, 300, 300));
+            elp.FillColor = Color.White;
+            elp.BorderColor = Color.Black;
+            elp.Opacity = 255;
+            ShapeList.Add(elp);
+        }
+
+        public static void AddRandomExamShapeFour()
+        {
+            Random rnd = new Random();
+            int x = rnd.Next(100, 1000);
+            int y = rnd.Next(100, 600);
+
+            ExamShapeFour elp = new ExamShapeFour(new Rectangle(x, y, 300, 150));
             elp.FillColor = Color.White;
             elp.BorderColor = Color.Black;
             elp.Opacity = 255;

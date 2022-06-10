@@ -67,8 +67,10 @@
             this.trackBar1 = new System.Windows.Forms.TrackBar();
             this.label3 = new System.Windows.Forms.Label();
             this.examShapeFive = new System.Windows.Forms.ToolStripButton();
-            this.viewPort = new Draw.DoubleBufferedPanel();
             this.examShapeTwo = new System.Windows.Forms.ToolStripButton();
+            this.examShapThree = new System.Windows.Forms.ToolStripButton();
+            this.viewPort = new Draw.DoubleBufferedPanel();
+            this.ExamShapeFour = new System.Windows.Forms.ToolStripButton();
             this.mainMenu.SuspendLayout();
             this.statusBar.SuspendLayout();
             this.speedMenu.SuspendLayout();
@@ -204,7 +206,9 @@
             this.examShapeOne,
             this.examShapeEight,
             this.examShapeFive,
-            this.examShapeTwo});
+            this.examShapeTwo,
+            this.examShapThree,
+            this.ExamShapeFour});
             this.speedMenu.Location = new System.Drawing.Point(0, 24);
             this.speedMenu.Name = "speedMenu";
             this.speedMenu.Size = new System.Drawing.Size(938, 25);
@@ -417,6 +421,26 @@
             this.examShapeFive.Text = "examShapeFive";
             this.examShapeFive.Click += new System.EventHandler(this.examShapeFive_Click);
             // 
+            // examShapeTwo
+            // 
+            this.examShapeTwo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.examShapeTwo.Image = ((System.Drawing.Image)(resources.GetObject("examShapeTwo.Image")));
+            this.examShapeTwo.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.examShapeTwo.Name = "examShapeTwo";
+            this.examShapeTwo.Size = new System.Drawing.Size(23, 22);
+            this.examShapeTwo.Text = "examShapeTwo";
+            this.examShapeTwo.Click += new System.EventHandler(this.examShapeTwo_Click);
+            // 
+            // examShapThree
+            // 
+            this.examShapThree.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.examShapThree.Image = ((System.Drawing.Image)(resources.GetObject("examShapThree.Image")));
+            this.examShapThree.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.examShapThree.Name = "examShapThree";
+            this.examShapThree.Size = new System.Drawing.Size(23, 22);
+            this.examShapThree.Text = "examShapThree";
+            this.examShapThree.Click += new System.EventHandler(this.examShapThree_Click);
+            // 
             // viewPort
             // 
             this.viewPort.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -430,15 +454,15 @@
             this.viewPort.MouseMove += new System.Windows.Forms.MouseEventHandler(this.ViewPortMouseMove);
             this.viewPort.MouseUp += new System.Windows.Forms.MouseEventHandler(this.ViewPortMouseUp);
             // 
-            // examShapeTwo
+            // ExamShapeFour
             // 
-            this.examShapeTwo.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.examShapeTwo.Image = ((System.Drawing.Image)(resources.GetObject("examShapeTwo.Image")));
-            this.examShapeTwo.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.examShapeTwo.Name = "examShapeTwo";
-            this.examShapeTwo.Size = new System.Drawing.Size(23, 22);
-            this.examShapeTwo.Text = "examShapeTwo";
-            this.examShapeTwo.Click += new System.EventHandler(this.examShapeTwo_Click);
+            this.ExamShapeFour.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ExamShapeFour.Image = ((System.Drawing.Image)(resources.GetObject("ExamShapeFour.Image")));
+            this.ExamShapeFour.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ExamShapeFour.Name = "ExamShapeFour";
+            this.ExamShapeFour.Size = new System.Drawing.Size(23, 22);
+            this.ExamShapeFour.Text = "ExamShapeFour";
+            this.ExamShapeFour.Click += new System.EventHandler(this.ExamShapeFour_Click);
             // 
             // MainForm
             // 
@@ -511,5 +535,7 @@
         private System.Windows.Forms.ToolStripButton examShapeEight;
         private System.Windows.Forms.ToolStripButton examShapeFive;
         private System.Windows.Forms.ToolStripButton examShapeTwo;
+        private System.Windows.Forms.ToolStripButton examShapThree;
+        private System.Windows.Forms.ToolStripButton ExamShapeFour;
     }
 }

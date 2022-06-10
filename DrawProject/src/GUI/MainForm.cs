@@ -312,5 +312,17 @@ namespace Draw
             DialogProcessor.AddRandomExamShapeTwo();
             InvalidateViewPort("asd");
         }
+
+        private void examShapThree_Click(object sender, EventArgs e)
+        {
+            DialogProcessor.AddRandomExamShapeThree();
+            InvalidateViewPort("asd");
+        }
+
+        private void ExamShapeFour_Click(object sender, EventArgs e)
+        {
+            DialogProcessor.AddRandomExamShapeFour();
+            InvalidateViewPort("asd");
+        }
     }
 }
